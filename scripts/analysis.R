@@ -57,8 +57,6 @@ result_teacher <- dataframe_teacher$Frequencia_Total[1:5]
 
 names(result_teacher) <- dataframe_teacher$Pessoas[1:5]
 
-names(result_teacher) <- c("RUTE", "ELAINE", "EMERSON", "LIDIA", "QUEREN")
-
 result_teacher
 
 data_general_ebd <- c(total = sum(data_raw_students$Frequencia_Total >= 1), 
@@ -69,11 +67,11 @@ data_general_ebd <- c(total = sum(data_raw_students$Frequencia_Total >= 1),
 
 data_general_ebd
 
-outros <- c(Estefane_Est_Primarios = dataframe_students[dataframe_students$Classe == "Prim\xe1rio", ][1, 2],
-            Daielen_Est_Jovens = dataframe_students[dataframe_students$Classe == "Jovens", ][1, 2],
-            Luan_Est_Jovens = dataframe_students[dataframe_students$Classe == "Jovens", ][2, 2],
-            Jorge_Prof_Senhores = dataframe_teacher[dataframe_teacher$Classe == "Senhores", ][1, 2],
-            Jose_Prof_Novos = dataframe_teacher[dataframe_teacher$Classe == "Novos Convertidos", ][1, 2])
+outros <- c(E_Est_Primarios = dataframe_students[dataframe_students$Classe == "Prim\xe1rio", ][1, 2],
+            D_Est_Jovens = dataframe_students[dataframe_students$Classe == "Jovens", ][1, 2],
+            L_Est_Jovens = dataframe_students[dataframe_students$Classe == "Jovens", ][2, 2],
+            J_Prof_Senhores = dataframe_teacher[dataframe_teacher$Classe == "Senhores", ][1, 2],
+            Jo_Prof_Novos = dataframe_teacher[dataframe_teacher$Classe == "Novos Convertidos", ][1, 2])
 outros
 
 write.table(name_certificate, file = paste('output/','certificate.txt'), col.names = FALSE)
